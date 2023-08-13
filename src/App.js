@@ -3,8 +3,7 @@ import Images from "./Images";
 import "./style.css";
 
 function App() {
-
-  const [selectedImg, setSelectedImg]=useState(Images[0]);
+  const [selectedImg, setSelectedImg] = useState(Images[0]);
 
   return (
     <div className="App">
@@ -13,10 +12,13 @@ function App() {
       </div>
       <div className="imgContainer">
         {Images.map((img, index) => (
-          <img key={index} src={img} alt="Bursa Lezzetleri" 
-      onClick={()=> setSelectedImg}
-      />
-      ))}
+          <img
+            key={index}
+            src={img}
+            alt="Bursa Lezzetleri"
+            onClick={() => setSelectedImg(img)}
+          />
+        ))}
       </div>
     </div>
   );
