@@ -1,6 +1,6 @@
-import React , {useState} from 'react';
-import Images from './Images';
-import './style.css';
+import React, { useState } from "react";
+import Images from "./Images";
+import "./style.css";
 
 function App() {
   return (
@@ -9,7 +9,9 @@ function App() {
         <img src="" alt="Selected" className="selected" />
       </div>
       <div className="imgContainer">
-        <img src="" alt="Bursa lezzetleri"/>
+        {Images.map((img, index) => (
+          <img key={index} src={img} alt="Bursa Lezzetleri" />
+        ))}
       </div>
     </div>
   );
