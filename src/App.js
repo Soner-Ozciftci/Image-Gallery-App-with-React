@@ -3,6 +3,9 @@ import Images from "./Images";
 import "./style.css";
 
 function App() {
+
+const [selectedImg , setSelectedImg] = useState(Images[0]);
+
   return (
     <div className="App">
       <div className="container">
